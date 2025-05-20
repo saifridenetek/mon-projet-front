@@ -1,0 +1,44 @@
+[
+  {
+    "email": "samira@example.com",
+    "password": "123456",
+    "name": "samira",
+    "role": "PATIENT",
+    "token": "mock-patient-1747257863363"
+  },
+  {
+    "email": "samira1@example.com",
+    "password": "123456",
+    "name": "samira1",
+    "role": "PATIENT",
+    "token": "mock-patient-1747258470851"
+  },
+  {
+    "email": "samira2@example.com",
+    "password": "123456",
+    "name": "samira2",
+    "role": "PATIENT",
+    "token": "mock-patient-1747258872954"
+  },
+  {
+    "email": "samira3@example.com",
+    "password": "123456",
+    "name": "samira3",
+    "role": "DOCTOR",
+    "token": "mock-doctor-1747258978163"
+  },
+  {
+    "email": "samira4@example.com",
+    "password": "123456",
+    "name": "samira4",
+    "role": "PATIENT",
+    "token": "mock-patient-1747260309097"
+  },
+  {
+    "email": "sami@example.com",
+    "password": "123456",
+    "name": "sami",
+    "role": "PATIENT",
+    "token": "mock-patient-1747262758356"
+  }
+]

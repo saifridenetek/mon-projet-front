@@ -1,0 +1,65 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">Register</h2>
+          <form [formGroup]="registerForm" (ngSubmit)="signup()">
+            <div class="form-group mb-3">
+              <label for="name">Name:</label>
+              <input type="text" id="name" formControlName="name" class="form-control" required />
+              <div *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched" class="text-danger mt-1">
+                <small *ngIf="registerForm.get('name')?.errors?.['required']">Name is required</small>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="email">Email:</label>
+              <input type="email" id="email" formControlName="email" class="form-control" required />
+              <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="text-danger mt-1">
+                <small *ngIf="registerForm.get('email')?.errors?.['required']">Email is required</small>
+                <small *ngIf="registerForm.get('email')?.errors?.['email']">Enter a valid email</small>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="password">Password:</label>
+              <input type="password" id="password" formControlName="password" class="form-control" required />
+              <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="text-danger mt-1">
+                <small *ngIf="registerForm.get('password')?.errors?.['required']">Password is required</small>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="confirmPassword">Confirm Password:</label>
+              <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control" required />
+              <div *ngIf="registerForm.get('confirmPassword')?.invalid && registerForm.get('confirmPassword')?.touched" class="text-danger mt-1">
+                <small *ngIf="registerForm.get('confirmPassword')?.errors?.['required']">Confirm Password is required</small>
+              </div>
+              <div *ngIf="registerForm.errors?.['mismatch'] && (registerForm.get('confirmPassword')?.touched || registerForm.get('confirmPassword')?.dirty)" class="text-danger mt-1">
+                <small>Passwords do not match</small>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="role">Role:</label>
+              <select id="role" formControlName="role" class="form-control" required>
+                <option *ngFor="let role of roles" [value]="role">{{role}}</option>
+              </select>
+              <div *ngIf="registerForm.get('role')?.invalid && registerForm.get('role')?.touched" class="text-danger mt-1">
+                <small *ngIf="registerForm.get('role')?.errors?.['required']">Role is required</small>
+              </div>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Register</button>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer text-center">
+          <p class="mb-0">Already have an account? <a routerLink="/signin">Login here</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

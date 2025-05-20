@@ -1,0 +1,43 @@
+<div class="container mt-4">
+  <div class="jumbotron">
+    <h1 class="display-4">{{ welcomeMessage }}</h1>
+    <p class="lead">Here's a quick overview of your day.</p>
+    <hr class="my-4">
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Total Appointments Today</h5>
+          <p class="card-text display-4">{{ totalAppointmentsToday }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Pending Validations</h5>
+          <p class="card-text display-4">{{ pendingValidations }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-body">
+ <h5 class="card-title">Recent Treatments Filed</h5>
+          <p class="card-text display-4">{{ recentTreatments.length }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+        <button class="btn btn-primary btn-lg me-md-2" type="button" (click)="viewAppointmentsList()">View Appointments</button>
+        <button class="btn btn-danger btn-lg" type="button" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</div>

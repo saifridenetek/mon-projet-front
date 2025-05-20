@@ -1,0 +1,183 @@
+/* appointments-list.component.css */
+
+.appointments-container {
+  margin-top: 20px;
+}
+
+.appointment-table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+}
+
+.appointment-table th,
+.appointment-table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.appointment-table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.appointment-table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+.appointment-table .table-sm th,
+.appointment-table .table-sm td {
+  padding: 0.3rem;
+}
+
+.appointment-table .table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.appointment-table .table-bordered th,
+.appointment-table .table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.appointment-table .table-bordered thead th,
+.appointment-table .table-bordered thead td {
+  border-bottom-width: 2px;
+}
+
+.appointment-table .table-borderless th,
+.appointment-table .table-borderless td,
+.appointment-table .table-borderless thead th,
+.appointment-table .table-borderless tbody + tbody {
+  border: 0;
+}
+
+.appointment-table .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.appointment-table .table-hover tbody tr:hover {
+  color: #212529;
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.appointment-table .table-primary,
+.appointment-table .table-primary > th,
+.appointment-table .table-primary > td {
+  background-color: #b8daff;
+}
+
+.appointment-table .table-secondary,
+.appointment-table .table-secondary > th,
+.appointment-table .table-secondary > td {
+  background-color: #d6d8db;
+}
+
+.appointment-table .table-success,
+.appointment-table .table-success > th,
+.appointment-table .table-success > td {
+  background-color: #c3e6cb;
+}
+
+.appointment-table .table-info,
+.appointment-table .table-info > th,
+.appointment-table .table-info > td {
+  background-color: #bee5eb;
+}
+
+.appointment-table .table-warning,
+.appointment-table .table-warning > th,
+.appointment-table .table-warning > td {
+  background-color: #ffeeba;
+}
+
+.appointment-table .table-danger,
+.appointment-table .table-danger > th,
+.appointment-table .table-danger > td {
+  background-color: #f5c6cb;
+}
+
+.appointment-table .table-light,
+.appointment-table .table-light > th,
+.appointment-table .table-light > td {
+  background-color: #fdfdfe;
+}
+
+.appointment-table .table-dark,
+.appointment-table .table-dark > th,
+.appointment-table .table-dark > td {
+  background-color: #c6c8ca;
+}
+
+.appointment-table .table-active,
+.appointment-table .table-active > th,
+.appointment-table .table-active > td {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.appointment-table .thead-dark th {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #454d55;
+}
+
+.appointment-table .thead-light th {
+  color: #495057;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: auto;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.pagination .page-item .page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.pagination .page-item .page-link:hover {
+  z-index: 2;
+  color: #0056b3;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.pagination .page-item .page-link:focus {
+  z-index: 2;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.pagination .page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.pagination .page-item:first-child .page-link {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.pagination .page-item:last-child .page-link {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.btn-action {
+    margin-right: 5px;
+}

@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="my-4">Treatment Records</h2>
+
+  <div>
+    <div *ngIf="!treatments || treatments.length === 0" class="alert alert-info">
+      <p>No treatment records found.</p>
+    </div>
+
+    <div *ngFor="let treatment of treatments" class="card mb-3">
+      <div class="card-header">
+        <h5 class="mb-0">Treatment on {{ treatment.appointmentDate }}</h5>
+        <small class="text-muted">Doctor: {{ treatment.doctorName }}</small>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><strong>Diagnosis:</strong> {{ treatment.diagnosis }}</p>
+        <p class="card-text"><strong>Prescription / Notes:</strong> {{ treatment.prescription }}</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-secondary" routerLink="/patient/dashboard">Back to Dashboard</button>
+</div>

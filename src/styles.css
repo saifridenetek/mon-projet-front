@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Import Bootstrap */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Custom global styles */
+body {
+ font-family: 'Arial', sans-serif;
+ background-color: #f8f9fa; /* Light gray background */
+ color: #343a40; /* Dark gray text */
+ margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ color: #0056b3; /* A shade of blue for headings */
+ margin-bottom: 0.5rem;
+ font-weight: 500;
+ line-height: 1.2;
+}
+
+/* Example of custom styling for a button (optional) */
+.btn-primary {
+ background-color: #007bff;
+ border-color: #007bff;
+}
+
+/* Add more custom styles as needed */

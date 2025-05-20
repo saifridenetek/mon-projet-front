@@ -1,0 +1,42 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Book an Appointment
+        </div>
+        <div class="card-body" >
+          <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+  <label for="doctor">Select Doctor:</label>
+  <select id="doctor" class="form-control" formControlName="doctorEmail" required>
+    <option value="">--Please choose a doctor--</option>
+    <option *ngFor="let doctor of doctors" [value]="doctor.email">
+      Dr. {{ doctor.username }} ({{ 'Internal medicine' }})
+    </option>
+  </select>
+</div>
+
+            <div class="form-group">
+              <label for="appointment_date">Date:</label>
+              <input type="date" id="appointment_date" class="form-control" formControlName="appointmentDate" required>
+            </div>
+
+            <div class="form-group">
+              <label for="appointment_time">Time:</label>
+              <input type="time" id="appointment_time" class="form-control" formControlName="appointmentTime" required>
+            </div>
+
+            <div class="form-group">
+              <label for="reason">Reason for Appointment:</label>
+              <textarea id="reason" rows="4" cols="50" class="form-control" formControlName="reason" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Book Appointment</button>
+            <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel/Back</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

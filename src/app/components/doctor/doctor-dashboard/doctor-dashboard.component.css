@@ -1,0 +1,100 @@
+/* Doctor Dashboard Styles */
+
+.doctor-dashboard-container {
+    padding: 20px;
+}
+
+.welcome-message {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.dashboard-overview {
+    margin-bottom: 30px;
+}
+
+.overview-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.overview-card h4 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.overview-card p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.dashboard-buttons {
+    margin-top: 20px;
+}
+
+.dashboard-buttons .btn {
+    margin-right: 10px;
+    margin-bottom: 10px; /* Added for better spacing on small screens */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .welcome-message {
+        font-size: 1.3rem;
+    }
+
+    .overview-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .overview-card p {
+        font-size: 1rem;
+    }
+
+    .dashboard-buttons .btn {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .doctor-dashboard-container {
+        padding: 15px;
+    }
+
+    .welcome-message {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .dashboard-overview {
+        margin-bottom: 20px;
+    }
+
+    .overview-card {
+        padding: 10px;
+    }
+
+    .overview-card h4 {
+        font-size: 1rem;
+    }
+
+    .overview-card p {
+        font-size: 0.9rem;
+    }
+
+    .dashboard-buttons {
+        text-align: center;
+    }
+
+    .dashboard-buttons .btn {
+        margin-right: 0;
+        width: 100%;
+    }
+}

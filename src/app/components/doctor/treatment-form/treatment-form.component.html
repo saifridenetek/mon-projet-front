@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Fill Treatment File</h2>
+
+  <div *ngIf="appointmentDetails" class="card mb-4">
+    <div class="card-header">
+      Appointment Information
+    </div>
+    <div class="card-body">
+      <p class="card-text"><strong>Patient:</strong> {{ appointmentDetails.patientName }}</p>
+      <p class="card-text"><strong>Date:</strong> {{ appointmentDetails.dateTime }}</p>
+      <p class="card-text"><strong>Time:</strong> {{ appointmentDetails.dateTime }}</p>
+      <p class="card-text"><strong>Reason:</strong> {{ appointmentDetails.reason }}</p>
+    </div>
+  </div>
+
+  <!-- Ajout : messages d'information -->
+  <div *ngIf="isSubmitting" class="alert alert-info">
+    Submitting treatment...
+  </div>
+
+  <div *ngIf="submitError" class="alert alert-danger">
+    {{ submitError }}
+  </div>
+
+  <form [formGroup]="treatmentForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="diagnosis" class="form-label">Diagnosis:</label>
+      <textarea id="diagnosis" class="form-control" formControlName="diagnosis" rows="4" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="prescription" class="form-label">Prescription / Notes:</label>
+      <textarea id="prescription" class="form-control" formControlName="prescription" rows="6" required></textarea>
+    </div>
+
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-primary me-2"
+              [disabled]="treatmentForm.invalid || isSubmitting">
+        <span *ngIf="!isSubmitting">Submit Treatment</span>
+        <span *ngIf="isSubmitting">Submitting...</span>
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Back to Appointments</button>
+    </div>
+  </form>
+</div>
